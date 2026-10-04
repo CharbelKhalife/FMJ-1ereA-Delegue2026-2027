@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Charbel – Candidat délégué</title>
+  <meta name="description" content="Une voix. Des idées. Des réponses. Charbel, candidat délégué : écouter, transmettre, défendre, suivre.">
+  <meta name="theme-color" content="#14213D">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+<a class="skip" href="#pourquoi">Aller au contenu</a>
+
+<!-- SECTION 1 : HERO -->
+<header class="hero" id="accueil">
+  <div class="wrap">
+    <figure class="photo">
+      <!-- Remplace assets/candidate-team.jpg par ta photo (même nom de fichier) -->
+      <img src="assets/candidate-team.jpg" alt="Charbel Khalife, candidat délégué, et son suppléant" width="1200" height="900">
+      <figcaption>
+        <p class="qui"><strong class="nom" data-bind="candidat">Charbel Khalife</strong><span>Candidat délégué</span></p>
+        <p class="qui"><strong class="nom" data-bind="suppleant">[PRÉNOM DU SUPPLÉANT]</strong><span>Suppléant</span></p>
+      </figcaption>
+    </figure>
+    <div class="hero-texte">
+      <h1 class="slogan"><span>Une voix.</span><span>Des idées.</span><span>Des réponses.</span></h1>
+      <p class="intro">Je veux représenter la classe en écoutant ses propositions, en les transmettant, en les défendant et en assurant leur suivi.</p>
+      <a class="btn" href="#proposer" data-form-link>Proposer une idée</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- SECTION 2 : POURQUOI JE ME PRÉSENTE -->
+<section class="section" id="pourquoi">
+  <div class="wrap texte">
+    <h2>Pourquoi je me présente</h2>
+    <p>Je suis plutôt discret. Je préfère écouter que parler pour attirer l'attention, mais quand il y a quelque chose à faire, j'agis.</p>
+    <p>Certaines idées que j'avais en tête ne semblaient jamais arriver jusqu'à la direction. Je ne blâme personne : le rôle de délégué a ses limites. Je pense simplement qu'on peut mieux faire circuler les idées de la classe.</p>
+    <ul class="points">
+      <li>Je préfère écouter avant de parler.</li>
+      <li>Je ne promettrai pas ce que je ne peux pas contrôler.</li>
+      <li>Je veux représenter la classe avec sérieux.</li>
+      <li>Je veux que vos propositions parviennent vraiment aux personnes concernées.</li>
+      <li>Je suis disponible pour aider ceux qui viennent me demander de l'aide.</li>
+    </ul>
+    <p class="engagement">Je ferai en sorte que les propositions de la classe soient réellement écoutées, transmises, défendues lorsque cela est raisonnable, et suivies.</p>
+  </div>
+</section>
+
+<!-- SECTION 3 : MES 4 OBJECTIFS -->
+<section class="section bande" id="objectifs">
+  <div class="wrap">
+    <h2>Mes 4 objectifs</h2>
+    <p class="chaine">Écouter → Transmettre → Défendre → Suivre</p>
+    <div class="grille">
+      <article class="carte"><h3>Écouter</h3><p>Vos problèmes, vos idées, vos propositions.</p></article>
+      <article class="carte"><h3>Transmettre</h3><p>Les faire parvenir aux professeurs et à la direction.</p></article>
+      <article class="carte"><h3>Défendre</h3><p>Expliquer et défendre les demandes raisonnables de la classe.</p></article>
+      <article class="carte"><h3>Suivre</h3><p>Vous tenir au courant des réponses et de l'avancement.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4 : COMMENT ÇA MARCHE -->
+<section class="section" id="fonctionnement">
+  <div class="wrap texte">
+    <h2>Comment ça marche ?</h2>
+    <ol class="etapes">
+      <li><h3>Vous proposez une idée.</h3><p>Sur le formulaire, sans donner votre nom si vous préférez.</p></li>
+      <li><h3>Je la consulte et je regroupe les propositions similaires.</h3><p>Pour transmettre des demandes claires plutôt qu'une longue liste.</p></li>
+      <li><h3>Je la transmets aux personnes concernées.</h3><p>Professeurs ou direction, selon le sujet.</p></li>
+      <li><h3>Je reviens vers la classe avec la réponse.</h3><p>Acceptée, refusée, en discussion ou en attente : vous saurez où ça en est.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- SECTION 5 : PROPOSER UNE IDÉE (+ QR code) -->
+<section class="section" id="proposer" style="padding-top:0">
+  <div class="wrap">
+    <div class="proposer">
+      <div>
+        <h2>Une idée pour notre classe ?</h2>
+        <p class="grand">Proposez-la.</p>
+        <p class="doux">Une seule question : « Quelle proposition aimerais-tu voir défendue pour notre classe ? » Tu peux répondre sans donner ton nom.</p>
+        <a class="btn" href="#proposer" data-form-link>Proposer une idée</a>
+      </div>
+      <!-- Espace QR code : fond blanc, bords nets, prêt à être imprimé -->
+      <div class="qr-bloc">
+        <div class="qr-cadre" id="qr" role="img" aria-label="QR code du formulaire de propositions"></div>
+        <p class="qr-legende">Une idée ? Scanne-moi.</p>
+        <button class="btn btn-clair" id="qr-telecharger" type="button" hidden>Télécharger le QR code</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 6 : VOS PROPOSITIONS (modifiées à la main dans script.js) -->
+<section class="section bande" id="propositions">
+  <div class="wrap texte">
+    <h2>Vos propositions</h2>
+    <p>Voici les propositions reçues et où elles en sont. Aucun nom n'est affiché.</p>
+    <ul class="props" id="liste-propositions"></ul>
+  </div>
+</section>
+
+<!-- SECTION 7 : AIDER LES AUTRES -->
+<section class="section" id="aider">
+  <div class="wrap texte">
+    <h2>Aider les autres</h2>
+    <p class="engagement">Si vous avez besoin d'aide et que vous venez me voir, je ferai de mon mieux pour vous aider.</p>
+    <p style="margin-top:1.5rem">Cela peut concerner :</p>
+    <ul class="points" style="margin-top:0">
+      <li>les cours ;</li>
+      <li>les notes ;</li>
+      <li>une explication ;</li>
+      <li>ou simplement une question que vous avez envie de poser.</li>
+    </ul>
+    <p style="margin-top:1.5rem" class="doux">Je suis moi-même élève, avec mes propres obligations : si je manque de temps, je vous le dirai simplement. Je ne suis pas là pour faire la leçon à quelqu'un.</p>
+  </div>
+</section>
+
+<!-- SECTION 8 : TRANSPARENCE -->
+<section class="section bande" id="transparence">
+  <div class="wrap texte">
+    <h2>Transparence</h2>
+    <p>Une proposition ne signifie pas automatiquement qu'elle sera acceptée. Mon engagement est de la transmettre, de la défendre lorsque cela est pertinent et de communiquer la réponse à la classe.</p>
+    <p class="engagement">Je ne peux pas vous promettre que toutes nos demandes seront acceptées. Je peux vous promettre qu'elles seront entendues, transmises et défendues.</p>
+    <p style="margin-top:1.5rem">Le suivi est la partie que je veux le mieux faire. Même quand la réponse tarde, je vous dirai où en est la demande :</p>
+    <p class="tags">
+      <span class="tag s-acceptee">Acceptée</span>
+      <span class="tag s-refusee">Refusée</span>
+      <span class="tag s-discussion">En discussion</span>
+      <span class="tag s-delai">Plus de temps nécessaire</span>
+    </p>
+  </div>
+</section>
+
+<!-- SECTION 9 : APPEL À L'ACTION FINAL -->
+<section class="section final" id="idee">
+  <div class="wrap">
+    <h2>Une idée pour notre classe ?</h2>
+    <p class="slogan-pied">Une voix. Des idées. Des réponses.</p>
+    <a class="btn" href="#proposer" data-form-link>Proposer une idée</a>
+  </div>
+</section>
+</main>
+
+<footer class="pied">
+  <div class="wrap">
+    <p><span data-bind="candidat">Charbel</span>, candidat délégué. Suppléant : <span data-bind="suppleant">[PRÉNOM DU SUPPLÉANT]</span>.</p>
+    <p>Ce site ne demande aucune information personnelle.</p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,123 @@
+/* ========== COULEURS ET POLICES : modifie ici ========== */
+:root{
+  --fond:#F3F5F7;      /* fond de page */
+  --carte:#FFFFFF;     /* cartes et bandes */
+  --encre:#14213D;     /* texte principal et section finale */
+  --doux:#485468;      /* texte secondaire */
+  --accent:#1F6F8B;    /* boutons, traits */
+  --accent-fonce:#175570;
+  --signal:#E9B44C;    /* petit trait de couleur (slogan, engagements) */
+  --ligne:#D8DEE6;
+  --titre:"Bricolage Grotesque",system-ui,sans-serif;
+  --corps:"Instrument Sans",system-ui,sans-serif;
+  --rayon:14px;
+  --max:1080px;
+}
+/* ======================================================== */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--fond);color:var(--encre);font:400 1.0625rem/1.65 var(--corps)}
+img{max-width:100%;display:block}
+h1,h2,h3{font-family:var(--titre);margin:0;line-height:1.1;letter-spacing:-.02em}
+h2{font-size:clamp(1.9rem,6.5vw,2.75rem);font-weight:600;margin-bottom:1rem}
+h3{font-size:1.3rem;font-weight:600}
+p{margin:0 0 1em}
+[hidden]{display:none!important}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{width:min(100% - 2.5rem,var(--max));margin-inline:auto}
+.texte{max-width:42rem;margin-inline:0}
+.texte.wrap{margin-inline:auto}
+.doux{color:var(--doux)}
+.skip{position:absolute;left:-999px}
+.skip:focus{left:1rem;top:1rem;background:#fff;padding:.5rem 1rem;z-index:9}
+
+.section{padding:clamp(3rem,9vw,5.5rem) 0}
+.bande{background:var(--carte);border-block:1px solid var(--ligne)}
+
+/* Boutons */
+.btn{display:inline-flex;align-items:center;justify-content:center;width:100%;min-height:3.25rem;padding:.8rem 1.6rem;border:0;border-radius:999px;background:var(--accent);color:#fff;font:600 1.05rem var(--corps);text-decoration:none;cursor:pointer;transition:background .2s}
+.btn:hover{background:var(--accent-fonce)}
+.btn-clair{background:transparent;color:var(--accent);border:2px solid var(--accent)}
+.btn-clair:hover{background:var(--accent);color:#fff}
+@media(min-width:600px){.btn{width:auto}}
+
+/* Hero */
+.hero{padding:1.25rem 0 3.5rem}
+.hero .wrap{display:grid;gap:1.75rem}
+.photo{margin:0;background:var(--carte);border:1px solid var(--ligne);border-radius:var(--rayon);overflow:hidden}
+.photo img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.photo.vide img{display:none}
+.photo.vide::before{content:"Ajoute ta photo : assets/candidate-team.jpg";display:grid;place-items:center;aspect-ratio:4/3;margin:.75rem;padding:1rem;border:2px dashed var(--ligne);border-radius:10px;color:var(--doux);text-align:center}
+.photo figcaption{display:grid;grid-template-columns:1fr 1fr;gap:1rem;padding:1rem 1.1rem;border-top:1px solid var(--ligne)}
+.qui{margin:0;line-height:1.35;overflow-wrap:anywhere}
+.nom{display:block;font:600 1.05rem/1.25 var(--titre);text-transform:uppercase;letter-spacing:.04em}
+.qui span{color:var(--doux);font-size:.95rem}
+.slogan{font-weight:800;font-size:clamp(2.3rem,9.5vw,4.6rem);line-height:1;letter-spacing:-.035em}
+.slogan span{display:block;animation:monte .7s ease both}
+.slogan span:nth-child(2){padding-left:.45em;animation-delay:.25s}
+.slogan span:nth-child(3){padding-left:.9em;animation-delay:.5s}
+.slogan::after{content:"";display:block;width:4.5rem;height:6px;margin-top:1.4rem;border-radius:3px;background:var(--signal)}
+@keyframes monte{from{opacity:0;transform:translateY(.35em)}}
+.intro{max-width:34rem;margin:1.5rem 0;font-size:1.15rem;color:var(--doux)}
+@media(min-width:860px){
+  .hero{padding:3rem 0 4.5rem}
+  .hero .wrap{grid-template-columns:1fr 1fr;align-items:center;gap:4rem}
+  .photo{grid-column:2;grid-row:1}
+  .hero-texte{grid-column:1;grid-row:1}
+}
+
+/* Textes, listes, engagements */
+.points{list-style:none;margin:1.5rem 0 0;padding:0;display:grid;gap:.7rem}
+.points li{position:relative;padding-left:1.7rem}
+.points li::before{content:"";position:absolute;left:0;top:.85em;width:.8rem;height:2px;background:var(--accent)}
+.engagement{margin:2rem 0 0;padding:1.2rem 1.4rem;border-left:5px solid var(--signal);border-radius:0 var(--rayon) var(--rayon) 0;background:var(--carte);font:600 clamp(1.2rem,4.4vw,1.5rem)/1.35 var(--titre)}
+.bande .engagement{background:var(--fond)}
+
+/* Objectifs */
+.chaine{color:var(--doux);font-weight:500}
+.grille{display:grid;gap:1rem;margin-top:2rem}
+.carte{padding:1.4rem 1.4rem 1.5rem;border:1px solid var(--ligne);border-left:5px solid var(--accent);border-radius:var(--rayon);background:var(--fond)}
+.carte h3{font-size:1.5rem;margin-bottom:.4rem}
+.carte p{margin:0;color:var(--doux)}
+@media(min-width:640px){.grille{grid-template-columns:1fr 1fr}}
+
+/* Étapes : une vraie séquence, donc numérotée */
+.etapes{list-style:none;margin:2rem 0 0;padding:0;counter-reset:e}
+.etapes li{position:relative;counter-increment:e;padding:0 0 2rem 3.6rem}
+.etapes li:last-child{padding-bottom:0}
+.etapes li::before{content:counter(e);position:absolute;left:0;top:0;display:grid;place-items:center;width:2.5rem;height:2.5rem;border-radius:50%;background:var(--encre);color:#fff;font:600 1rem var(--titre)}
+.etapes li:not(:last-child)::after{content:"";position:absolute;left:1.2rem;top:2.5rem;bottom:0;width:2px;background:var(--ligne)}
+.etapes h3{padding-top:.25rem;font-size:1.2rem;line-height:1.3}
+.etapes p{margin:.3rem 0 0;color:var(--doux)}
+
+/* Proposer + QR */
+.proposer{display:grid;gap:2rem;padding:clamp(1.5rem,5vw,3rem);border:1px solid var(--ligne);border-radius:22px;background:var(--carte)}
+.grand{font:600 clamp(1.5rem,5vw,2rem)/1.2 var(--titre)}
+.qr-bloc{display:grid;justify-items:center;gap:.9rem;text-align:center}
+.qr-cadre{width:min(100%,260px);aspect-ratio:1;padding:14px;border:1px solid var(--ligne);border-radius:12px;background:#fff}
+.qr-cadre img,.qr-cadre canvas{width:100%!important;height:100%!important}
+.qr-cadre.vide{display:grid;place-items:center;padding:1rem;border-style:dashed;color:var(--doux);font-size:.95rem}
+.qr-legende{margin:0;font:600 1.15rem var(--titre)}
+@media(min-width:760px){.proposer{grid-template-columns:1.3fr 1fr;align-items:center;gap:3rem}}
+
+/* Propositions et statuts (texte + pastille : jamais la couleur seule) */
+.props{list-style:none;margin:2rem 0 0;padding:0;display:grid;gap:.85rem}
+.prop{padding:1.1rem 1.25rem;border:1px solid var(--ligne);border-radius:var(--rayon);background:var(--fond)}
+.prop p{margin:0 0 .7rem;font-weight:500}
+.prop small{display:block;margin-top:.6rem;color:var(--doux);font-size:.95rem}
+.tags{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem}
+.tag{display:inline-flex;align-items:center;gap:.5rem;padding:.2rem .75rem;border:1.5px solid currentColor;border-radius:999px;font-size:.9rem;font-weight:600;line-height:1.5}
+.tag::before{content:"";width:.55rem;height:.55rem;border-radius:50%;background:currentColor}
+.s-transmise{color:#1F6F8B}.s-discussion{color:#8A5A00}.s-delai{color:#5B4B8A}.s-acceptee{color:#1E7A46}.s-refusee{color:#A33A3A}
+.exemple{margin-left:.6rem;color:var(--doux);font-size:.85rem;font-style:italic}
+
+/* Section finale et pied de page */
+.final{background:var(--encre);color:#fff;text-align:center}
+.final .slogan-pied{margin-bottom:2rem;color:#C9D3E3}
+.final .btn{background:#fff;color:var(--encre)}
+.final .btn:hover{background:var(--signal)}
+.final .btn:focus-visible{outline-color:var(--signal)}
+.pied{padding:2rem 0;color:var(--doux);font-size:.95rem}
+.pied p{margin:0 0 .3rem}
+
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}

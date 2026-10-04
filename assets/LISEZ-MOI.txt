@@ -1,0 +1,2 @@
+Place ici ta photo, nommee exactement : candidate-team.jpg
+(format paysage conseille, environ 1200 x 900 px, moins de 400 Ko)
