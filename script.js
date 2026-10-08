@@ -10,9 +10,9 @@ const SUPPLEANT = "Raymond Khoury";
 //    reponse : optionnel (texte court). exemple: true affiche l'étiquette « Exemple ».
 //    Pour ne rien afficher : PROPOSITIONS = []
 const PROPOSITIONS = [
-  { texte: "Afficher les dates des contrôles à un endroit visible de la salle.", statut: "transmise", exemple: false },
-  { texte: "Creation d'un club de Maths.", statut: "discussion", reponse: "La direction étudie la question.", exemple: false },
-  { texte: "Créer un espace de partage des cours en cas d'absence.", statut: "complete", exemple: false },
+  { texte: "Afficher les dates des contrôles à un endroit visible de la salle.", statut: "transmise"},
+  { texte: "Creation d'un club de Maths.", statut: "discussion", reponse: "La direction étudie la question."},
+  { texte: "Créer un espace de partage des cours en cas d'absence.", statut: "complete"},
 ];
 
 /* ===================================================== */
